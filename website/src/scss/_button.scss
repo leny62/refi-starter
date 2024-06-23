@@ -1,0 +1,75 @@
+@import './colors';
+@import './mixins';
+
+.button {
+    display: flex;
+    width: 312px;
+    height: 54px;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    align-self: center;
+    border-radius: 70px;
+    box-shadow: none;
+    background: var(--Blue, #2642AE);
+    border: none;
+    font-family: 'nunitobold', sans-serif;
+    font-size: 16px;
+    line-height: 135%;
+    text-align: center;
+    color: $white;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 700;
+
+    &:hover {
+        background: $primary-hover;
+        color: $disabled;
+    }
+
+    @include bp(mobile) {
+        width: 100%;
+    }
+}
+
+.button-inactive {
+    cursor: default;
+    background: $disabled;
+
+    &:hover {
+        background: $disabled;
+    }
+}
+
+.button_outline {
+    width: 227px;
+    border-radius: 50px;
+    border: 1px solid $primary;
+    background: $white;
+    display: flex;
+    padding: 14px 60px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    // typography
+
+    color: #283445;
+    text-align: center;
+    font-family: 'nunitomedium';
+    font-size: 20px;
+    font-weight: 510;
+    line-height: normal;
+
+    &:hover {
+        background: $primary-hover;
+        color: $white;
+    }
+}
+
+.form__next-button {
+    border-radius: 50px;
+    background: var(--Stroke-field, #DAE0E1);
+}

@@ -1,0 +1,33 @@
+@import './reset';
+@import './fonts';
+@import './text-styles';
+@import './container';
+@import './button';
+@import './colors';
+@import './mixins';
+@import './input';
+
+html{
+  scroll-behavior: smooth;
+}
+
+.hide-sm {
+  @include bp(tablet) {
+    display: none;
+  }
+  @include bp(mobile) {
+    display: none;
+  }
+}
+
+.hide-ds {
+  display: none;
+
+  @include bp(tablet) {
+    display: block;
+  }
+
+  @include bp(mobile) {
+    display: block;
+  }
+}

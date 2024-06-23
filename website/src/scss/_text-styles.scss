@@ -1,0 +1,131 @@
+@import './colors';
+@import './mixins';
+
+a{
+    font-family: 'nunitoregular';
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    color: $black;
+
+    &:hover{
+        color: $blue
+    }
+}
+
+p{
+    font-family: 'nunitoregular';
+    font-size: 16px;
+    line-height: 20px;
+    color: $black;
+
+    @include bp(mobile){
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+h1{
+    font-family: 'nunitobold';
+    font-size: 35px;
+    line-height: 40px;
+    color: $black;
+
+    @include bp(tablet){
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    @include bp(mobile){
+        font-size: 30px;
+        line-height: 36px;
+    }
+}
+
+h2{
+    font-family: 'nunitobold';
+    font-size: 28px;
+    line-height: 32px;
+    color: $black;
+
+    @include bp(tablet){
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    @include bp(mobile){
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+h3{
+    font-family: 'nunitobold';
+    font-size: 24px;
+    line-height: 30px;
+    color: $black;
+
+    @include bp(tablet){
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    @include bp(mobile){
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+h4{
+    font-family: 'nunitobold';
+    font-size: 20px;
+    line-height: 26px;
+    color: $black;
+
+    @include bp(tablet){
+        font-size: 18px;
+        line-height: 22px;
+    }
+    @include bp(mobile){
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+h5{
+    font-family: 'nunitobold';
+    font-size: 18px;
+    line-height: 24px;
+    color: $black;
+
+    @include bp(tablet){
+        font-size: 16px;
+        line-height: 20px;
+    }
+    @include bp(mobile){
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+h6{
+    font-family: 'nunitomedium';
+    font-size: 24px;
+    line-height: 32px;
+    color: $black;
+
+    @include bp(tablet){
+        font-size: 18px;
+        line-height: 24px;
+    }
+    @include bp(mobile){
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+b {
+    font-family: 'nunitobold';
+    font-size: 20px;
+    line-height: 27px;
+}

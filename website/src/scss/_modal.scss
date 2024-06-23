@@ -1,0 +1,226 @@
+@import './colors';
+@import './mixins';
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background: rgba(22, 25, 41, 0.65);
+    z-index: 30;
+
+    &.modal-overlay--open {
+      display: flex;
+    }
+}
+
+.modal {
+    background: $white;
+    border-radius: 20px;
+    position: relative;
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .props-card {
+        display: flex;
+        padding: 16px 24px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 17px;
+        border-radius: 20px;
+        background: var(--Red-Gradient, linear-gradient(164deg, #FF1B47 6.36%, #DE0E37 94.93%));
+
+        @include bp(tablet) {
+            align-items: center;
+        }
+
+        @include bp(mobile) {
+            align-items: center;
+        }
+
+        .protection-prop {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            p {
+                color: $white;
+                text-align: center;
+                font-family: 'nunitoregularregular';
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 22px;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .business-redirect {
+        margin-top: 10px;
+        span {
+            font-family: "nunitoregular";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+    
+            @include bp(mobile) {
+                font-size: 13px;
+            }
+    
+            a {
+                font-family: "nunitobold";
+                font-style: normal;
+                font-size: 16px;
+                line-height: 17px;
+                text-align: center;
+                color: $primary;
+    
+                @include bp(mobile) {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    h2{
+        font-family: 'nunitobold';
+        font-size: 25px;
+        line-height: 38px;
+        max-width: 388px;
+        margin-bottom: 12px;
+
+        img {
+            width: 74px;
+            margin-bottom: -5px;
+
+            @include bp(mobile) {
+            width: 68px;
+                margin-bottom: -6px;
+            }
+        }
+
+        span {
+            font-family: 'nunitobold';
+            font-size: 25px;
+
+            @include bp(mobile) {
+                font-size: 20px;
+            }
+
+        }
+        span:nth-child(6) {
+            font-family: 'nunitobold';
+            font-size: 20px;
+            line-height: 28px;
+            margin-top: 24px;
+
+
+            @include bp(mobile) {
+                font-size: 21px;
+            }
+        }
+    }
+
+    span {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    @include bp(tablet) {
+        padding: 24px;
+    }
+
+    @include bp(mobile) {
+        width: 90%;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal__close {
+        position: absolute;
+        border: none;
+        display: block;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        background: url('../images/close-icon.svg') no-repeat center;
+        right: 22px;
+        top: 22px;
+
+        @include bp(mobile) {
+          right: 14px;
+          top: 14px;
+        }
+    }
+
+    .qualify-form{
+        align-items: center;
+        gap: 4px;
+
+        .confirmation-wrapper{
+            margin-top: 10px;
+
+            @include bp(mobile) {
+                width: 300px;
+            }
+        }
+
+
+        .brand{
+            align-items: center;
+
+            h5 {
+                font-family: 'nunitobold';
+                font-size: 18px;
+                line-height: 30px;
+            }
+
+            .options-wrapper {
+
+                &.option--hidden {
+                    display: none;
+                }
+
+                &.option--brand-expand {
+                    width: 341px;
+                    height: 64px;
+                    border: 0px solid $grey;
+                    background: #F3F5F7;
+                    border-radius: 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+
+                    @include bp(mobile) {
+                        width: 220px;
+                    }
+                }
+            }
+        }
+
+        .error-message-modal {
+            display: none;
+            color: #FE431A;
+            font-size: 14px;
+    
+            &.error-message--display {
+                display: block;
+                margin: -18px 0px;
+            }
+        }
+
+    }
+}
