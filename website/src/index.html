@@ -1,37 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="<%=__webpack_public_path__%>assets/favicon.ico"
-      type="image/x-icon"
-    />
-    <title>Refi Starter</title>
-    <meta
-      name="description"
-      content=""
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="Refi Starter"
-    />
-    <meta property="og:url" content="https://refistarter.com/" />
-    <meta
-      property="og:description"
-      content=""
-    />
-    <meta property="og:image" content="https://refistarter.com/assets/website/571f34bc960b35564505.png" />
-    <link rel="canonical" href="https://refistarter.com/" />
-  </head>
 
-  <body>
-    <main>
-dasl;'dflm,v'apl;kfmsv dp
-'akls;kmref 'op[vjkl]'
-    </main>
-    <%= require('html-loader!./html-parts/_footer.html') %>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="<%=__webpack_public_path__%>assets/favicon.ico" type="image/x-icon" />
+  <title>Refi Starter</title>
+  <meta name="description" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Refi Starter" />
+  <meta property="og:url" content="https://refistarter.com/" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="https://refistarter.com/assets/website/571f34bc960b35564505.png" />
+  <link rel="canonical" href="https://refistarter.com/" />
+  <link href="./scss/output.scss" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body class="body">
+  <!-- header -->
+  <header class="bg-black text-white py-4 px-8 w-full flex items-center justify-between shadow-2xl">
+    <div class="text-xl font-bold">Refi Starter</div>
+    <nav class="hidden sm:block flex-1 text-center">
+      <ul class="flex justify-center space-x-4">
+        <li><a href="#" class="text-white hover:text-gray-300">Home</a></li>
+        <li><a href="#" class="text-white hover:text-gray-300">Projects</a></li>
+        <li><a href="#" class="text-white hover:text-gray-300">Team</a></li>
+        <li><a href="#" class="text-white hover:text-gray-300">Launchpad</a></li>
+        <li><a href="#" class="text-white hover:text-gray-300">Entrepreneurs</a></li>
+      </ul>
+    </nav>
+    <button class="bg-transparent border border-[#fff] text-[#fff] py-2 px-4 rounded-lg flex items-center">
+      Submit Project
+    </button>
+  </header>
+  <!-- main -->
+  <main class="bg-main-bg bg-cover bg-center min-h-screen flex flex-col gap-[2rem] items-center justify-center" style="background-image: url('./images/Heros.png');">
+    <div class="text-center">
+      <span class="block text-4xl font-normal">Empowering Web3 ReFi Projects</span>
+      <span class="block text-4xl font-normal">for a Sustainable Future</span>
+    </div>
+    <div class="flex space-x-4 h-[3rem]">
+      <button class="bg-black text-white py-2 px-4 rounded-lg">Invest Now</button>
+      <button class="bg-transparent border border-black text-black py-2 px-4 rounded-lg flex items-center">
+        <i class="fas fa-upload mr-2"></i>
+        Submit Project
+      </button>
+    </div>
+  </main>
+  <!-- section 2 -->
+  <div class="mb-[1rem]">
+    <div class="border border-white p-8 flex items-center justify-center">
+      <p class="text-3xl font-bold mb-4">What are we looking for?</p>
+    </div>
+    <div class="flex flex-col gap-[3rem]">
+      <div class="flex flex-wrap gap-[2rem] flex items-center justify-center">
+        <div class="w-[10rem] flex flex-col items-center justify-center">
+          <button class="bg-transparent border border-black text-black w-[3rem] h-[3rem] rounded-full	 flex items-center">
+          </button>
+          <span class="w-[8rem] text-center">Climate Tech Circular Solutions</span>
+        </div>
+        <div class="w-[10rem] flex flex-col items-center justify-center">
+          <button class="bg-transparent border border-black text-black w-[3rem] h-[3rem] rounded-full	 flex items-center">
+          </button>
+          <span class="w-[8rem] text-center">Climate Tech Circular Solutions</span>
+        </div>
+        <div class="w-[10rem] flex flex-col items-center justify-center">
+          <button class="bg-transparent border border-black text-black w-[3rem] h-[3rem] rounded-full	 flex items-center">
+          </button>
+          <span class="w-[8rem] text-center">Climate Tech Circular Solutions</span>
+        </div>
+        <div class="w-[10rem] flex flex-col items-center justify-center">
+          <button class="bg-transparent border border-black text-black w-[3rem] h-[3rem] rounded-full	 flex items-center">
+          </button>
+          <span class="w-[8rem] text-center">Climate Tech Circular Solutions</span>
+        </div>
+        <div class="w-[10rem] flex flex-col items-center justify-center">
+          <button class="bg-transparent border border-black text-black w-[3rem] h-[3rem] rounded-full	 flex items-center">
+          </button>
+          <span class="w-[8rem] text-center">Climate Tech Circular Solutions</span>
+        </div>
+        <div class="w-[10rem] flex flex-col items-center justify-center">
+          <button class="bg-transparent border border-black text-black w-[3rem] h-[3rem] rounded-full	 flex items-center">
+          </button>
+          <span class="w-[8rem] text-center">Climate Tech Circular Solutions</span>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-[2rem] flex items-center justify-center">
+        <div class="w-[10rem] flex flex-col items-center justify-center">
+          <button class="bg-transparent border border-black text-black w-[3rem] h-[3rem] rounded-full	 flex items-center">
+          </button>
+          <span class="w-[8rem] text-center">Climate Tech Circular Solutions</span>
+        </div>
+        <div class="w-[10rem] flex flex-col items-center justify-center">
+          <button class="bg-transparent border border-black text-black w-[3rem] h-[3rem] rounded-full	 flex items-center">
+          </button>
+          <span class="w-[8rem] text-center">Climate Tech Circular Solutions</span>
+        </div>
+        <div class="w-[10rem] flex flex-col items-center justify-center">
+          <button class="bg-transparent border border-black text-black w-[3rem] h-[3rem] rounded-full	 flex items-center">
+          </button>
+          <span class="w-[8rem] text-center">Climate Tech Circular Solutions</span>
+        </div>
+        <div class="w-[10rem] flex flex-col items-center justify-center">
+          <button class="bg-transparent border border-black text-black w-[3rem] h-[3rem] rounded-full	 flex items-center">
+          </button>
+          <span class="w-[8rem] text-center">Climate Tech Circular Solutions</span>
+        </div>
+        <div class="w-[10rem] flex flex-col items-center justify-center">
+          <button class="bg-transparent border border-black text-black w-[3rem] h-[3rem] rounded-full	 flex items-center">
+          </button>
+          <span class="w-[8rem] text-center">Climate Tech Circular Solutions</span>
+        </div>
+        <div class="w-[10rem] flex flex-col items-center justify-center">
+          <button class="bg-transparent border border-black text-black w-[3rem] h-[3rem] rounded-full	 flex items-center">
+          </button>
+          <span class="w-[8rem] text-center">Climate Tech Circular Solutions</span>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-[2rem] flex items-center justify-center">
+        <div class="w-[10rem] flex flex-col items-center justify-center">
+          <button class="bg-transparent border border-black text-black w-[3rem] h-[3rem] rounded-full	 flex items-center">
+          </button>
+          <span class="w-[8rem] text-center">Climate Tech Circular Solutions</span>
+        </div>
+        <div class="w-[10rem] flex flex-col items-center justify-center">
+          <button class="bg-transparent border border-black text-black w-[3rem] h-[3rem] rounded-full	 flex items-center">
+          </button>
+          <span class="w-[8rem] text-center">Climate Tech Circular Solutions</span>
+        </div>
+        <div class="w-[10rem] flex flex-col items-center justify-center">
+          <button class="bg-transparent border border-black text-black w-[3rem] h-[3rem] rounded-full	 flex items-center">
+          </button>
+          <span class="w-[8rem] text-center">Climate Tech Circular Solutions</span>
+        </div>
+        <div class="w-[10rem] flex flex-col items-center justify-center">
+          <button class="bg-transparent border border-black text-black w-[3rem] h-[3rem] rounded-full	 flex items-center">
+          </button>
+          <span class="w-[8rem] text-center">Climate Tech Circular Solutions</span>
+        </div>
+        <div class="w-[10rem] flex flex-col items-center justify-center">
+          <button class="bg-transparent border border-black text-black w-[3rem] h-[3rem] rounded-full	 flex items-center">
+          </button>
+          <span class="w-[8rem] text-center">Climate Tech Circular Solutions</span>
+        </div>
+        <div class="w-[10rem] flex flex-col items-center justify-center">
+          <button class="bg-transparent border border-black text-black w-[3rem] h-[3rem] rounded-full	 flex items-center">
+          </button>
+          <span class="w-[8rem] text-center">Climate Tech Circular Solutions</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
