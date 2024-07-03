@@ -63,51 +63,18 @@ $(() => {
 });
 
 window.onload = function () {
-  let contactForm = document.querySelector(".contact-form");
-  let successMessage = document.querySelector(".success-message");
-  let errorMessage = document.querySelector(".error-message");
-  let closeIcon = document.querySelector(".close-icon");
-
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    let firstName = contactForm.elements["firstName"].value;
-    let lastName = contactForm.elements["lastName"].value;
-    let name = `${firstName} ${lastName}`;
-
-    let formData = new FormData(contactForm);
-    formData.append("name", name);
-
-    let body = new URLSearchParams();
-    for (let pair of formData) {
-      body.append(pair[0], pair[1]);
-    }
-
-    fetch("/v1/brands/58/contacts", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: body,
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(
-            `Network response was not ok, status: ${response.status}`
-          );
-        }
-        contactForm.style.display = "none";
-        successMessage.style.display = "flex";
-      })
-      .catch((error) => {
-        errorMessage.style.display = "flex";
-        console.error(
-          `There has been a problem with your fetch operation: ${error.message}`
-        );
+  const toggleButtons = document.querySelectorAll('.toggle-button');
+  toggleButtons.forEach(button => {
+      button.addEventListener('click', function() {
+          const content = this.nextElementSibling;
+          content.classList.toggle('hidden');
+          
+          const toggleSymbol = this.querySelector('.symbol');
+          if (toggleSymbol.textContent === '+') {
+              toggleSymbol.textContent = '-';
+          } else {
+              toggleSymbol.textContent = '+';
+          }
       });
-  });
-
-  closeIcon.addEventListener("click", () => {
-    errorMessage.style.display = "none";
   });
 };
