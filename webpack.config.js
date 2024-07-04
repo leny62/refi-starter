@@ -12,16 +12,16 @@ if (fs.existsSync(confPath)) {
 }
 
 module.exports = {
-  mode: "development",
+  mode: "production", // Use production mode for deployment
   output: {
     publicPath: "/",
-    filename: "js/main.[contenthash].js", 
+    filename: "js/main.[contenthash].js",
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
     new webpack.ProgressPlugin(),
     new MiniCssExtractPlugin({
-      filename: "css/main.[contenthash].css", 
+      filename: "css/main.[contenthash].css",
     }),
     new HtmlWebpackPlugin({
       template: "src/index.html",
@@ -37,16 +37,11 @@ module.exports = {
     new HtmlWebpackPartialsPlugin({
       path: path.resolve(__dirname, 'partials/analytics.html'),
       location: 'head',
-      priority: 'high', template_filename: '*',
+      priority: 'high',
+      template_filename: '*',
       options: {}
     }),
-    // new HtmlWebpackPartialsPlugin({
-    //   path: 'src/partials/webpush.html',
-    //   location: 'head',
-    //   priority: 'low', template_filename: '*',
-    // }),
   ],
-
   module: {
     rules: [
       {
@@ -82,19 +77,18 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif|mp4|webm)$/i,
         type: "asset/resource",
         generator: {
-          filename: "[hash][ext][query]", 
+          filename: "assets/images/[hash][ext][query]", // Ensure images are placed in the assets/images directory
         },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: "asset/resource",
         generator: {
-          filename: "fonts/[hash][ext][query]", 
+          filename: "fonts/[hash][ext][query]",
         },
       },
     ],
   },
-
   devServer: {
     open: true,
     host: "localhost",
