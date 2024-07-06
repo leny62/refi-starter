@@ -93,4 +93,7 @@ module.exports = {
     open: true,
     host: "localhost",
   },
+  performance: {
+    hints: false
+  }
 };
