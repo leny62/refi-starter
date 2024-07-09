@@ -6,42 +6,59 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlWebpackPartialsPlugin = require("html-webpack-partials-plugin");
 
 module.exports = {
-  mode: "production", // Use production mode for deployment
+  mode: "development",
   output: {
     publicPath: "/",
-    filename: "js/main.[contenthash].js",
-    path: path.resolve(__dirname, 'dist'),
+    filename: "main.[contenthash].js",
   },
   plugins: [
     new webpack.ProgressPlugin(),
     new MiniCssExtractPlugin({
-      filename: "css/main.[contenthash].css",
+      filename: "main.[contenthash].css",
     }),
     new HtmlWebpackPlugin({
       template: "src/index.html",
     }),
     new CopyPlugin({
-      patterns: [
-        {
-          from: 'src/favicons',
-          to: 'assets',
-        },
-      ],
+      patterns: [{ from: "src/favicons", to: "assets" }],
     }),
     new HtmlWebpackPartialsPlugin({
-      path: path.resolve(__dirname, 'partials/analytics.html'),
-      location: 'head',
-      priority: 'high',
-      template_filename: '*',
-      options: {}
+      path: "./partials/analytics.html",
+      location: "body",
+      priority: "low",
+      template_filename: "*",
     }),
   ],
+
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         include: [path.resolve(__dirname, "src")],
         loader: "babel-loader",
+      },
+      {
+        test: /\.(pdf)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+            },
+          },
+        ],
+      },
+      {
+        test: /\.mp4$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "video",
+            },
+          },
+        ],
       },
       {
         test: /.(sa|sc|c)ss$/,
@@ -68,26 +85,39 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif|mp4|webm)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
         type: "asset/resource",
         generator: {
-          filename: "assets/images/[hash][ext][query]", // Ensure images are placed in the assets/images directory
+          filename: "assets/[hash][ext][query]",
         },
       },
+
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: "asset/resource",
         generator: {
-          filename: "fonts/[hash][ext][query]",
+          filename: "assets/fonts/[name][ext]",
         },
       },
     ],
   },
+
   devServer: {
     open: true,
     host: "localhost",
   },
-  performance: {
-    hints: false
-  }
+
+  optimization: {
+    moduleIds: "deterministic",
+    runtimeChunk: "single",
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          chunks: "all",
+        },
+      },
+    },
+  },
 };
