@@ -1,8 +1,6 @@
 import "./scss/styles.scss";
 import $ from "jquery";
-import "slick-carousel/slick/slick.scss";
-import "slick-carousel";
-import sass from './scss/styles.scss'
+
 
 $(() => {
   document.querySelectorAll(".nav__link").forEach((link) => {

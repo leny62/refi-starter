@@ -1,99 +1,107 @@
 const path = require("path");
 const webpack = require("webpack");
-const CopyPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
-const fs = require('fs');
-
-const confPath = path.resolve(__dirname, 'conf');
-if (fs.existsSync(confPath)) {
-  require('custom-env').env(true, 'conf');
-}
+const HtmlWebpackPartialsPlugin = require("html-webpack-partials-plugin");
 
 module.exports = {
-  mode: "production", // Use production mode for deployment
+  mode: "production",
+  entry: "./src/index.js", 
+
   output: {
+    path: path.resolve(__dirname, "dist"),
     publicPath: "/",
-    filename: "js/main.[contenthash].js",
-    path: path.resolve(__dirname, 'dist'),
+    filename: "main.[contenthash].js",
+    assetModuleFilename: 'assets/[hash][ext][query]'
   },
+
   plugins: [
     new webpack.ProgressPlugin(),
     new MiniCssExtractPlugin({
-      filename: "css/main.[contenthash].css",
+      filename: "main.[contenthash].css",
     }),
     new HtmlWebpackPlugin({
       template: "src/index.html",
     }),
     new CopyPlugin({
       patterns: [
-        {
-          from: 'src/favicons',
-          to: 'assets',
-        },
+        { from: "src/favicons", to: "assets" },
+        { from: "src/images", to: "assets/images" },
       ],
     }),
     new HtmlWebpackPartialsPlugin({
-      path: path.resolve(__dirname, 'partials/analytics.html'),
-      location: 'head',
-      priority: 'high',
-      template_filename: '*',
-      options: {}
+      path: path.join(__dirname, "./partials/analytics.html"), 
+      location: "body",
+      priority: "low",
     }),
   ],
+
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        include: [path.resolve(__dirname, "src")],
+        include: path.resolve(__dirname, "src"),
         loader: "babel-loader",
       },
       {
-        test: /.(sa|sc|c)ss$/,
+        test: /\.(pdf)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/[name][ext]',
+        },
+      },
+      {
+        test: /\.mp4$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/video/[name][ext]',
+        },
+      },
+      {
+        test: /\.(sa|sc|c)ss$/,
         use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
           {
-            loader: MiniCssExtractPlugin.loader,
-          },
-          {
-            loader: "css-loader",
+            loader: 'sass-loader',
             options: {
-              sourceMap: true,
-              importLoaders: 1,
-            },
-          },
-          {
-            loader: "postcss-loader",
-          },
-          {
-            loader: "sass-loader",
-            options: {
-              sourceMap: true,
+              sassOptions: {
+                includePaths: ['./node_modules'],
+              },
             },
           },
         ],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif|mp4|webm)$/i,
-        type: "asset/resource",
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
+        type: 'asset/resource',
         generator: {
-          filename: "assets/images/[hash][ext][query]", // Ensure images are placed in the assets/images directory
+          filename: 'assets/[hash][ext][query]',
         },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: "asset/resource",
+        type: 'asset/resource',
         generator: {
-          filename: "fonts/[hash][ext][query]",
+          filename: 'assets/fonts/[name][ext]',
         },
       },
     ],
   },
-  devServer: {
-    open: true,
-    host: "localhost",
+
+  optimization: {
+    moduleIds: "deterministic",
+    runtimeChunk: "single",
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          chunks: "all",
+        },
+      },
+    },
   },
-  performance: {
-    hints: false
-  }
 };
