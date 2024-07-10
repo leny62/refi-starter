@@ -6,11 +6,16 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlWebpackPartialsPlugin = require("html-webpack-partials-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
+  entry: "./src/index.js", 
+
   output: {
+    path: path.resolve(__dirname, "dist"),
     publicPath: "/",
     filename: "main.[contenthash].js",
+    assetModuleFilename: 'assets/[hash][ext][query]'
   },
+
   plugins: [
     new webpack.ProgressPlugin(),
     new MiniCssExtractPlugin({
@@ -20,13 +25,15 @@ module.exports = {
       template: "src/index.html",
     }),
     new CopyPlugin({
-      patterns: [{ from: "src/favicons", to: "assets" }],
+      patterns: [
+        { from: "src/favicons", to: "assets" },
+        { from: "src/images", to: "assets/images" },
+      ],
     }),
     new HtmlWebpackPartialsPlugin({
-      path: "./partials/analytics.html",
+      path: path.join(__dirname, "./partials/analytics.html"), 
       location: "body",
       priority: "low",
-      template_filename: "*",
     }),
   ],
 
@@ -34,77 +41,54 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        include: [path.resolve(__dirname, "src")],
+        include: path.resolve(__dirname, "src"),
         loader: "babel-loader",
       },
       {
         test: /\.(pdf)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-            },
-          },
-        ],
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/[name][ext]',
+        },
       },
       {
         test: /\.mp4$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-              outputPath: "video",
-            },
-          },
-        ],
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/video/[name][ext]',
+        },
       },
       {
-        test: /.(sa|sc|c)ss$/,
+        test: /\.(sa|sc|c)ss$/,
         use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
           {
-            loader: MiniCssExtractPlugin.loader,
-          },
-          {
-            loader: "css-loader",
+            loader: 'sass-loader',
             options: {
-              sourceMap: true,
-              importLoaders: 1,
-            },
-          },
-          {
-            loader: "postcss-loader",
-          },
-          {
-            loader: "sass-loader",
-            options: {
-              sourceMap: true,
+              sassOptions: {
+                includePaths: ['./node_modules'],
+              },
             },
           },
         ],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
-        type: "asset/resource",
+        type: 'asset/resource',
         generator: {
-          filename: "assets/[hash][ext][query]",
+          filename: 'assets/[hash][ext][query]',
         },
       },
-
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: "asset/resource",
+        type: 'asset/resource',
         generator: {
-          filename: "assets/fonts/[name][ext]",
+          filename: 'assets/fonts/[name][ext]',
         },
       },
     ],
-  },
-
-  devServer: {
-    open: true,
-    host: "localhost",
   },
 
   optimization: {
