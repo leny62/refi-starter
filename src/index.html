@@ -22,22 +22,26 @@
   <!-- main -->
   <main class="bg-main-bg bg-cover bg-center h-[100vh] 2xl:h-[50vh] flex flex-col gap-[2rem]"
     style="background-image: url('assets/images/Home.png');">
-    <header class="text-white py-8 px-8 w-full h-[80px] flex bg-transparent">
-      <div class="text-xl font-bold">Refi Starter</div>
+    <div class="absolute inset-0 z-0 h-[420px]" style="background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);"></div>
+    <header class="text-white py-8 px-8 w-full h-[80px] flex bg-transparent z-10">
+      <div class="w-18">
+        <img src="assets/images/header-logo.png" class="w-[134px]" alt="Refi Logo">
+      </div>
       <nav class="hidden sm:block flex-1 text-center">
         <ul class="flex justify-center space-x-4">
           <li><a href="#" class="text-white hover:text-gray-300">Home</a></li>
-          <li><a href="#" class="text-white hover:text-gray-300">Projects</a></li>
-          <li><a href="#" class="text-white hover:text-gray-300">Team</a></li>
-          <li><a href="#" class="text-white hover:text-gray-300">Launchpad</a></li>
+          <li><a href="#projects" class="text-white hover:text-gray-300">Projects</a></li>
+          <li><a href="#team" class="text-white hover:text-gray-300">Team</a></li>
+          <li><a href="#launches" class="text-white hover:text-gray-300">Launchpad</a></li>
           <li><a href="#" class="text-white hover:text-gray-300">Entrepreneurs</a></li>
         </ul>
       </nav>
-      <button class="bg-transparent border border-[#fff] text-[#fff] h-[2rem] py-2 px-4 rounded-lg flex items-center">
-        Submit Project
+      <button class="bg-transparent border border-[#fff] text-[#fff] h-[2rem] py-6 px-4 rounded-lg flex items-center">
+        Connect Wallet
       </button>
+
     </header>
-    <div class="flex flex-col justify-center items-center mt-[8rem] 2xl:mt-[15rem]">
+    <div class="flex flex-col justify-center items-center mt-[8rem] 2xl:mt-[15rem] gap-4">
       <div class="">
         <span class="block text-4xl font-normal text-center text-[#fff]">Empowering Web3 ReFi Projects</span>
         <span class="block text-4xl font-normal text-center text-[#fff]">for a Sustainable Future</span>
@@ -57,43 +61,43 @@
       <p class="text-3xl font-bold text-white">What are we looking for?</p>
     </div>
     <div class="flex flex-col gap-[3rem]">
-      <div class="flex flex-wrap gap-[2rem] flex items-center justify-center">
-        <div class="w-[10rem] flex flex-col items-center justify-center">
+      <div class="flex flex-wrap gap-[2rem] items-center justify-center">
+        <div class="w-[10rem] flex flex-col items-center justify-center gap-3">
           <button
             class="bg-transparent border border-white text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
-            <img src="assets/images/" />
+            <img src="assets/images/icons/climate-house.svg" />
           </button>
           <span class="w-[8rem] text-center text-white">Climate Tech Circular Solutions</span>
         </div>
-        <div class="w-[10rem] flex flex-col items-center justify-center">
+        <div class="w-[10rem] flex flex-col items-center justify-center gap-3">
           <button
             class="bg-transparent border border-white text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
-            <img src="assets/images/" />
+            <img src="assets/images/icons/co2.svg" />
           </button>
-          <span class="w-[8rem] text-center text-white">Climate Tech Circular Solutions</span>
+          <span class="w-[8rem] text-center text-white">Decarbonisation</span>
         </div>
-        <div class="w-[10rem] flex flex-col items-center justify-center">
+        <div class="w-[10rem] flex flex-col items-center justify-center gap-3">
           <button
             class="bg-transparent border border-white text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
             <img src="assets/images/Vector1.png" />
           </button>
           <span class="w-[8rem] text-center text-white">Open Source Regenerative AI</span>
         </div>
-        <div class="w-[10rem] flex flex-col items-center justify-center">
+        <div class="w-[10rem] flex flex-col items-center justify-center gap-3">
           <button
             class="bg-transparent border border-white text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
             <img src="assets/images/Vector2.png" />
           </button>
           <span class="w-[8rem] text-center text-white">FoodTech, AgroTech Marginal Communities</span>
         </div>
-        <div class="w-[10rem] flex flex-col items-center justify-center">
+        <div class="w-[10rem] flex flex-col items-center justify-center gap-3">
           <button
             class="bg-transparent border border-white text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
             <img src="assets/images/Vector3.png" />
           </button>
           <span class="w-[8rem] text-center text-white">Psychosocial wellbeing</span>
         </div>
-        <div class="w-[10rem] flex flex-col items-center justify-center">
+        <div class="w-[10rem] flex flex-col items-center justify-center gap-3">
           <button
             class="bg-transparent border border-white text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
             <img src="assets/images/Vector4.png" />
@@ -101,43 +105,43 @@
           <span class="w-[8rem] text-center text-white">Infra: Data Security, Privacy Trust on Web3</span>
         </div>
       </div>
-      <div class="flex flex-wrap gap-[2rem] flex items-center justify-center">
-        <div class="w-[10rem] flex flex-col items-center justify-center">
+      <div class="flex flex-wrap gap-[2rem] items-center justify-center">
+        <div class="w-[10rem] flex flex-col items-center justify-center gap-3">
           <button
             class="bg-transparent border border-white text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
             <img src="assets/images/Vector5.png" />
           </button>
           <span class="w-[8rem] text-center text-white">Drones, AI, Eco-automation</span>
         </div>
-        <div class="w-[10rem] flex flex-col items-center justify-center">
+        <div class="w-[10rem] flex flex-col items-center justify-center gap-3">
           <button
             class="bg-transparent border border-white text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
             <img src="assets/images/Vector6.png" />
           </button>
           <span class="w-[8rem] text-center text-white">DeSci, BioTech MedTech, HealthTech</span>
         </div>
-        <div class="w-[10rem] flex flex-col items-center justify-center">
+        <div class="w-[10rem] flex flex-col items-center justify-center gap-3">
           <button
             class="bg-transparent border border-white text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
             <img src="assets/images/Vector7.png" />
           </button>
           <span class="w-[8rem] text-center text-white">Recycling and Saving</span>
         </div>
-        <div class="w-[10rem] flex flex-col items-center justify-center">
+        <div class="w-[10rem] flex flex-col items-center justify-center gap-3">
           <button
             class="bg-transparent border border-white text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
             <img src="assets/images/Vector8.png" />
           </button>
           <span class="w-[8rem] text-center text-white">Clean Energy Storage, Exchange & Efficiency</span>
         </div>
-        <div class="w-[10rem] flex flex-col items-center justify-center">
+        <div class="w-[10rem] flex flex-col items-center justify-center gap-3">
           <button
             class="bg-transparent border border-white text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
             <img src="assets/images/Vector9.png" />
           </button>
           <span class="w-[8rem] text-center text-white">Forestation, Carbon Sequestration</span>
         </div>
-        <div class="w-[10rem] flex flex-col items-center justify-center">
+        <div class="w-[10rem] flex flex-col items-center justify-center gap-3">
           <button
             class="bg-transparent border border-white text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
             <img src="assets/images/Vector10.png" />
@@ -145,43 +149,43 @@
           <span class="w-[8rem] text-center text-white">Coral reforestation</span>
         </div>
       </div>
-      <div class="flex flex-wrap gap-[2rem] flex items-center justify-center">
-        <div class="w-[10rem] flex flex-col items-center justify-center">
+      <div class="flex flex-wrap gap-[2rem] items-center justify-center">
+        <div class="w-[10rem] flex flex-col items-center justify-center gap-3">
           <button
-            class="bg-transparent border border-white text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
+            class=" gap-3bg-transparent border border-white text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
             <img src="assets/images/Vector11.png" />
           </button>
           <span class="w-[8rem] text-center text-white">Automatization of Biodiversity protection</span>
         </div>
-        <div class="w-[10rem] flex flex-col items-center justify-center">
+        <div class="w-[10rem] flex flex-col items-center justify-center gap-3">
           <button
             class="bg-transparent border border-white text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
             <img src="assets/images/Vector12.png" />
           </button>
           <span class="w-[8rem] text-center text-white">Community-based regenerative infrastructure</span>
         </div>
-        <div class="w-[10rem] flex flex-col items-center justify-center">
+        <div class="w-[10rem] flex flex-col items-center justify-center gap-3">
           <button
             class="bg-transparent border border-white text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
             <img src="assets/images/Vector13.png" />
           </button>
           <span class="w-[8rem] text-center text-white">Soil recovery</span>
         </div>
-        <div class="w-[10rem] flex flex-col items-center justify-center">
+        <div class="w-[10rem] flex flex-col items-center justify-center gap-3">
           <button
             class="bg-transparent border border-white text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
             <img src="assets/images/Vector14.png" />
           </button>
           <span class="w-[8rem] text-center text-white">Hydro energy alternatives</span>
         </div>
-        <div class="w-[10rem] flex flex-col items-center justify-center">
+        <div class="w-[10rem] flex flex-col items-center justify-center gap-3">
           <button
             class="bg-transparent border border-white text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
             <img src="assets/images/Vector15.png" />
           </button>
           <span class="w-[8rem] text-center text-white">Anti-plastic solutions</span>
         </div>
-        <div class="w-[10rem] flex flex-col items-center justify-center">
+        <div class="w-[10rem] flex flex-col items-center justify-center gap-3">
           <button
             class="bg-transparent border border-white text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
             <img src="assets/images/Vector16.png" />
@@ -194,9 +198,9 @@
   <!-- section3 -->
   <div class="mb-[1rem]">
     <div class="border border-white p-8 flex items-center justify-center">
-      <p class="text-3xl font-bold text-white">Projects?</p>
+      <p class="text-3xl font-bold text-white">Projects</p>
     </div>
-    <div class="flex flex-wrap gap-[1rem] justify-center">
+    <div class="flex flex-wrap gap-[1rem] justify-center" id="projects">
       <div class="w-[21rem] h-[35rem] bg-[#202124]">
         <div class="w-[100%] flex flex-col justify-center items-center">
           <img src="assets/images/ProjectImage.png" class="w-[95%] h-auto py-[0.5rem]" />
@@ -212,27 +216,32 @@
           <div class="flex items-center w-full py-2 text-white">
             <span class="text-xs">Fundraise Goal</span>
             <div class="flex-1 border-t border-dotted border-white mx-2"></div>
-            <span class="text-xs">CELO</span>
+            <span class="text-xs">TBA</span>
           </div>
           <div class="flex items-center w-full py-2 text-white">
             <span class="text-xs">Type</span>
             <div class="flex-1 border-t border-dotted border-white mx-2"></div>
-            <span class="text-xs">CELO</span>
+            <span class="text-xs">IDO</span>
           </div>
           <div class="flex items-center w-full py-2 text-white">
             <span class="text-xs">Launch Date</span>
             <div class="flex-1 border-t border-dotted border-white mx-2"></div>
-            <span class="text-xs">CELO</span>
+            <span class="text-xs">TBA</span>
           </div>
           <div class="flex items-center w-full py-2 text-white">
             <span class="text-xs">Mix Allocation</span>
             <div class="flex-1 border-t border-dotted border-white mx-2"></div>
-            <span class="text-xs">CELO</span>
+            <span class="text-xs">TBA</span>
           </div>
           <div class="flex items-center w-full py-2 text-white">
             <span class="text-xs">Max Allocation</span>
             <div class="flex-1 border-t border-dotted border-white mx-2"></div>
-            <span class="text-xs">CELO</span>
+            <span class="text-xs">TBA</span>
+          </div>
+          <div class="flex items-center w-full py-2 text-white">
+            <span class="text-xs">Registration Period</span>
+            <div class="flex-1 border-t border-dotted border-white mx-2"></div>
+            <span class="text-xs">TBA</span>
           </div>
         </div>
         <div class="flex items-center justify-center">
@@ -247,37 +256,42 @@
           <img src="assets/images/ProjectImage2.png" class="w-[95%] h-auto py-[0.5rem]" />
         </div>
         <div class="px-[1.5rem]">
-          <p class="text-[#2DAEAF] text-xl font-bold">Motus DAO</p>
-          <p class="text-white text-xs">Universal Health DAO Fund</p>
+          <p class="text-[#2DAEAF] text-xl font-bold">ReFI Rides</p>
+          <p class="text-white text-xs">Decentralized fleet of eco-transportation</p>
           <div class="flex items-center w-full py-2 text-white mt-[2rem]">
             <span class="text-xs">Network</span>
             <div class="flex-1 border-t border-dotted border-white mx-2"></div>
-            <span class="text-xs">CELO</span>
+            <span class="text-xs">ARB</span>
           </div>
           <div class="flex items-center w-full py-2 text-white">
             <span class="text-xs">Fundraise Goal</span>
             <div class="flex-1 border-t border-dotted border-white mx-2"></div>
-            <span class="text-xs">CELO</span>
+            <span class="text-xs">TBA</span>
           </div>
           <div class="flex items-center w-full py-2 text-white">
             <span class="text-xs">Type</span>
             <div class="flex-1 border-t border-dotted border-white mx-2"></div>
-            <span class="text-xs">CELO</span>
+            <span class="text-xs">IDO/span>
           </div>
           <div class="flex items-center w-full py-2 text-white">
             <span class="text-xs">Launch Date</span>
             <div class="flex-1 border-t border-dotted border-white mx-2"></div>
-            <span class="text-xs">CELO</span>
+            <span class="text-xs">TBA</span>
           </div>
           <div class="flex items-center w-full py-2 text-white">
             <span class="text-xs">Mix Allocation</span>
             <div class="flex-1 border-t border-dotted border-white mx-2"></div>
-            <span class="text-xs">CELO</span>
+            <span class="text-xs">TBA</span>
           </div>
           <div class="flex items-center w-full py-2 text-white">
             <span class="text-xs">Max Allocation</span>
             <div class="flex-1 border-t border-dotted border-white mx-2"></div>
-            <span class="text-xs">CELO</span>
+            <span class="text-xs">TBA</span>
+          </div>
+          <div class="flex items-center w-full py-2 text-white">
+            <span class="text-xs">Registration Period</span>
+            <div class="flex-1 border-t border-dotted border-white mx-2"></div>
+            <span class="text-xs">TBA</span>
           </div>
         </div>
         <div class="flex items-center justify-center">
@@ -292,37 +306,42 @@
           <img src="assets/images/ProjectImage3.png" class="w-[95%] h-auto py-[0.5rem]" />
         </div>
         <div class="px-[1.5rem]">
-          <p class="text-[#2DAEAF] text-xl font-bold">Motus DAO</p>
-          <p class="text-white text-xs">Universal Health DAO Fund</p>
+          <p class="text-[#2DAEAF] text-xl font-bold">Regen OG</p>
+          <p class="text-white text-xs">Regen Community Token</p>
           <div class="flex items-center w-full py-2 text-white mt-[2rem]">
             <span class="text-xs">Network</span>
             <div class="flex-1 border-t border-dotted border-white mx-2"></div>
-            <span class="text-xs">CELO</span>
+            <span class="text-xs">OP</span>
           </div>
           <div class="flex items-center w-full py-2 text-white">
             <span class="text-xs">Fundraise Goal</span>
             <div class="flex-1 border-t border-dotted border-white mx-2"></div>
-            <span class="text-xs">CELO</span>
+            <span class="text-xs">TBA</span>
           </div>
           <div class="flex items-center w-full py-2 text-white">
             <span class="text-xs">Type</span>
             <div class="flex-1 border-t border-dotted border-white mx-2"></div>
-            <span class="text-xs">CELO</span>
+            <span class="text-xs">IDO</span>
           </div>
           <div class="flex items-center w-full py-2 text-white">
             <span class="text-xs">Launch Date</span>
             <div class="flex-1 border-t border-dotted border-white mx-2"></div>
-            <span class="text-xs">CELO</span>
+            <span class="text-xs">TBA</span>
           </div>
           <div class="flex items-center w-full py-2 text-white">
             <span class="text-xs">Mix Allocation</span>
             <div class="flex-1 border-t border-dotted border-white mx-2"></div>
-            <span class="text-xs">CELO</span>
+            <span class="text-xs">TBA</span>
           </div>
           <div class="flex items-center w-full py-2 text-white">
             <span class="text-xs">Max Allocation</span>
             <div class="flex-1 border-t border-dotted border-white mx-2"></div>
-            <span class="text-xs">CELO</span>
+            <span class="text-xs">TBA</span>
+          </div>
+          <div class="flex items-center w-full py-2 text-white">
+            <span class="text-xs">Registration Period</span>
+            <div class="flex-1 border-t border-dotted border-white mx-2"></div>
+            <span class="text-xs">TBA</span>
           </div>
         </div>
         <div class="flex items-center justify-center">
@@ -338,7 +357,7 @@
   <div class="mb-[1rem]">
     <div class="h-[100%]">
       <div class="border border-white p-8 flex items-center justify-center">
-        <p class="text-3xl font-bold text-white">Communities?</p>
+        <p class="text-3xl font-bold text-white">Communities</p>
       </div>
       <div class="flex flex-wrap gap-[2rem] items-center justify-center">
         <img src="assets/images/unite.png" />
@@ -369,14 +388,14 @@
   </div>
   <!-- section5 -->
   <div class="mb-[1rem]">
-    <div class="h-[100%]">
+    <div class="h-[100%]" id="team">
       <div class="border border-white p-8 flex items-center justify-center">
         <p class="text-3xl font-bold text-white">Our Team</p>
       </div>
       <div class="flex flex-wrap gap-[2rem] items-center justify-center">
         <div class="w-[13rem] h-[18rem] bg-[#202124]">
           <div class="flex flex-col justify-center items-center gap-[1rem]">
-            <img src="assets/images/Person.png" alt="Sample Image" class="w-25 h-25 rounded-full object-cover mt-[2rem]">
+            <img src="assets/images/tabata.png" alt="Tabata" class="w-24 h-24 rounded-full object-cover mt-[2rem]">
             <p class="text-xl text-[#31DDDD]">Tabata</p>
             <p class="text-xs text-[#fff] relative bottom-[1rem]">Tokenmics</p>
             <div class="w-[12rem] h-[2rem] flex justify-center gap-[1rem] items-center"
@@ -389,8 +408,21 @@
         </div>
         <div class="w-[13rem] h-[18rem] bg-[#202124]">
           <div class="flex flex-col justify-center items-center gap-[1rem]">
-            <img src="assets/images/Person.png" alt="Sample Image" class="w-25 h-25 rounded-full object-cover mt-[2rem]">
-            <p class="text-xl text-[#31DDDD]">Tabata</p>
+            <img src="assets/images/oscar.png" alt="Oscar" class="w-24 h-24 rounded-full object-cover mt-[2rem]">
+            <p class="text-xl text-[#31DDDD]">Oscar</p>
+            <p class="text-xs text-[#fff] relative bottom-[1rem]">Founder & CEO</p>
+            <div class="w-[12rem] h-[2rem] flex justify-center gap-[1rem] items-center"
+              style="background-image: linear-gradient(to right, #31DDDD, #83C543);">
+              <a href="#" target="_blank" class="text-[#252525] text-xl"><i class="fab fa-instagram"></i></a>
+              <a href="#" target="_blank" class="text-[#252525] text-xl"><i class="fab fa-twitter"></i></a>
+              <a href="#" target="_blank" class="text-[#252525] text-xl"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="w-[13rem] h-[18rem] bg-[#202124]">
+          <div class="flex flex-col justify-center items-center gap-[1rem]">
+            <img src="assets/images/susana.png" alt="Susana" class="w-24 h-24 rounded-full object-cover mt-[2rem]">
+            <p class="text-xl text-[#31DDDD]">Susana</p>
             <p class="text-xs text-[#fff] relative bottom-[1rem]">Tokenmics</p>
             <div class="w-[12rem] h-[2rem] flex justify-center gap-[1rem] items-center"
               style="background-image: linear-gradient(to right, #31DDDD, #83C543);">
@@ -402,8 +434,8 @@
         </div>
         <div class="w-[13rem] h-[18rem] bg-[#202124]">
           <div class="flex flex-col justify-center items-center gap-[1rem]">
-            <img src="assets/images/Person.png" alt="Sample Image" class="w-25 h-25 rounded-full object-cover mt-[2rem]">
-            <p class="text-xl text-[#31DDDD]">Tabata</p>
+            <img src="assets/images/leny.png" alt="Leny" class="w-24 h-24 rounded-full object-cover mt-[2rem]">
+            <p class="text-xl text-[#31DDDD]">Leny</p>
             <p class="text-xs text-[#fff] relative bottom-[1rem]">Tokenmics</p>
             <div class="w-[12rem] h-[2rem] flex justify-center gap-[1rem] items-center"
               style="background-image: linear-gradient(to right, #31DDDD, #83C543);">
@@ -415,8 +447,21 @@
         </div>
         <div class="w-[13rem] h-[18rem] bg-[#202124]">
           <div class="flex flex-col justify-center items-center gap-[1rem]">
-            <img src="assets/images/Person.png" alt="Sample Image" class="w-25 h-25 rounded-full object-cover mt-[2rem]">
-            <p class="text-xl text-[#31DDDD]">Tabata</p>
+            <img src="assets/images/miche.png" alt="Miche" class="w-24 h-24 rounded-full object-cover mt-[2rem]">
+            <p class="text-xl text-[#31DDDD]">Miche</p>
+            <p class="text-xs text-[#fff] relative bottom-[1rem]">Tokenmics</p>
+            <div class="w-[12rem] h-[2rem] flex justify-center gap-[1rem] items-center"
+              style="background-image: linear-gradient(to right, #31DDDD, #83C543);">
+              <a href="#" target="_blank" class="text-[#252525] text-xl"><i class="fab fa-instagram"></i></a>
+              <a href="#" target="_blank" class="text-[#252525] text-xl"><i class="fab fa-twitter"></i></a>
+              <a href="#" target="_blank" class="text-[#252525] text-xl"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="w-[13rem] h-[18rem] bg-[#202124]">
+          <div class="flex flex-col justify-center items-center gap-[1rem]">
+            <img src="assets/images/paola.png" alt="Paola" class="w-24 h-24 rounded-full object-cover mt-[2rem]">
+            <p class="text-xl text-[#31DDDD]">Paola</p>
             <p class="text-xs text-[#fff] relative bottom-[1rem]">Tokenmics</p>
             <div class="w-[12rem] h-[2rem] flex justify-center gap-[1rem] items-center"
               style="background-image: linear-gradient(to right, #31DDDD, #83C543);">
@@ -452,7 +497,7 @@
         <div class="w-[13rem] h-[18rem] bg-[#202124]">
           <div class="flex flex-col justify-center items-center gap-[1rem]">
             <img src="assets/images/Person.png" alt="Sample Image" class="w-25 h-25 rounded-full object-cover mt-[2rem]">
-            <p class="text-xl text-[#31DDDD]">Tabata</p>
+            <p class="text-xl text-[#31DDDD]">Nico</p>
             <p class="text-xs text-[#fff] relative bottom-[1rem]">Tokenmics</p>
             <div class="w-[12rem] h-[2rem] flex justify-center gap-[1rem] items-center"
               style="background-image: linear-gradient(to right, #31DDDD, #83C543);">
@@ -465,7 +510,7 @@
         <div class="w-[13rem] h-[18rem] bg-[#202124]">
           <div class="flex flex-col justify-center items-center gap-[1rem]">
             <img src="assets/images/Person.png" alt="Sample Image" class="w-25 h-25 rounded-full object-cover mt-[2rem]">
-            <p class="text-xl text-[#31DDDD]">Tabata</p>
+            <p class="text-xl text-[#31DDDD]">Miche</p>
             <p class="text-xs text-[#fff] relative bottom-[1rem]">Tokenmics</p>
             <div class="w-[12rem] h-[2rem] flex justify-center gap-[1rem] items-center"
               style="background-image: linear-gradient(to right, #31DDDD, #83C543);">
@@ -478,7 +523,7 @@
         <div class="w-[13rem] h-[18rem] bg-[#202124]">
           <div class="flex flex-col justify-center items-center gap-[1rem]">
             <img src="assets/images/Person.png" alt="Sample Image" class="w-25 h-25 rounded-full object-cover mt-[2rem]">
-            <p class="text-xl text-[#31DDDD]">Tabata</p>
+            <p class="text-xl text-[#31DDDD]">Oscar</p>
             <p class="text-xs text-[#fff] relative bottom-[1rem]">Tokenmics</p>
             <div class="w-[12rem] h-[2rem] flex justify-center gap-[1rem] items-center"
               style="background-image: linear-gradient(to right, #31DDDD, #83C543);">
@@ -500,7 +545,7 @@
       <div class="flex flex-wrap items-center justify-center p-4 w-[100%] h-[100%] 2xl:h-[20vh]"
         style="background-image: linear-gradient(to right, #31DDDD, #83C543);">
         <div class="flex flex-wrap gap-[6rem] items-center justify-center">
-          <div class="w-[10rem] flex flex-col items-center justify-center pt-2">
+          <div class="w-[10rem] flex flex-col items-center justify-center pt-2 gap-4">
             <button class="bg-[#24341D] text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
               <p class="text-3xl" style="
               background: linear-gradient(to right, #31DDDD, #83C543);
@@ -510,7 +555,7 @@
             </button>
             <span class="text-black">Climate Tech Circular Solutions</span>
           </div>
-          <div class="w-[10rem] flex flex-col items-center justify-center">
+          <div class="w-[10rem] flex flex-col items-center justify-center gap-4">
             <button class="bg-[#24341D] text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
               <p class="text-3xl" style="
               background: linear-gradient(to right, #31DDDD, #83C543);
@@ -520,7 +565,7 @@
             </button>
             <span class="text-black">Climate Tech Circular Solutions</span>
           </div>
-          <div class="w-[10rem] flex flex-col items-center justify-center">
+          <div class="w-[10rem] flex flex-col items-center justify-center gap-4">
             <button class="bg-[#24341D] text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
               <p class="text-3xl" style="
               background: linear-gradient(to right, #31DDDD, #83C543);
@@ -530,7 +575,7 @@
             </button>
             <span class=" text-black">Climate Tech Circular Solutions</span>
           </div>
-          <div class="w-[10rem] flex flex-col items-center justify-center">
+          <div class="w-[10rem] flex flex-col items-center justify-center gap-4">
             <button class="bg-[#24341D] text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
               <p class="text-3xl" style="
               background: linear-gradient(to right, #31DDDD, #83C543);
@@ -540,7 +585,7 @@
             </button>
             <span class="text-black">Climate Tech Circular Solutions</span>
           </div>
-          <div class="w-[10rem] flex flex-col items-center justify-center">
+          <div class="w-[10rem] flex flex-col items-center justify-center gap-4">
             <button class="bg-[#24341D] text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
               <p class="text-3xl" style="
               background: linear-gradient(to right, #31DDDD, #83C543);
@@ -550,7 +595,7 @@
             </button>
             <span class=" text-black">Climate Tech Circular Solutions</span>
           </div>
-          <div class="w-[10rem] flex flex-col items-center justify-center">
+          <div class="w-[10rem] flex flex-col items-center justify-center gap-4">
             <button class="bg-[#24341D] text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
               <p class="text-3xl" style="
               background: linear-gradient(to right, #31DDDD, #83C543);
@@ -560,7 +605,7 @@
             </button>
             <span class="text-black">Climate Tech Circular Solutions</span>
           </div>
-          <div class="w-[10rem] flex flex-col items-center justify-center">
+          <div class="w-[10rem] flex flex-col items-center justify-center gap-4">
             <button class="bg-[#24341D] text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
               <p class="text-3xl" style="
               background: linear-gradient(to right, #31DDDD, #83C543);
@@ -570,7 +615,7 @@
             </button>
             <span class="text-black">Climate Tech Circular Solutions</span>
           </div>
-          <div class="w-[10rem] flex flex-col items-center justify-center">
+          <div class="w-[10rem] flex flex-col items-center justify-center gap-4">
             <button class="bg-[#24341D] text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
               <p class="text-3xl" style="
               background: linear-gradient(to right, #31DDDD, #83C543);
@@ -580,7 +625,7 @@
             </button>
             <span class="text-black">Climate Tech Circular Solutions</span>
           </div>
-          <div class="w-[10rem] flex flex-col items-center justify-center">
+          <div class="w-[10rem] flex flex-col items-center justify-center gap-4">
             <button class="bg-[#24341D] text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
               <p class="text-3xl" style="
               background: linear-gradient(to right, #31DDDD, #83C543);
@@ -590,7 +635,7 @@
             </button>
             <span class="text-black">Climate Tech Circular Solutions</span>
           </div>
-          <div class="w-[10rem] flex flex-col items-center justify-center">
+          <div class="w-[10rem] flex flex-col items-center justify-center gap-4">
             <button class="bg-[#24341D] text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
               <p class="text-3xl" style="
               background: linear-gradient(to right, #31DDDD, #83C543);
@@ -600,7 +645,7 @@
             </button>
             <span class="text-black">Climate Tech Circular Solutions</span>
           </div>
-          <div class="w-[10rem] flex flex-col items-center justify-center">
+          <div class="w-[10rem] flex flex-col items-center justify-center gap-4">
             <button class="bg-[#24341D] text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
               <p class="text-3xl" style="
               background: linear-gradient(to right, #31DDDD, #83C543);
@@ -610,7 +655,7 @@
             </button>
             <span class="text-black">Climate Tech Circular Solutions</span>
           </div>
-          <div class="w-[10rem] flex flex-col items-center justify-center p-2">
+          <div class="w-[10rem] flex flex-col items-center justify-center p-2 gap-4">
             <button class="bg-[#24341D] text-black w-[3rem] h-[3rem] rounded-full	 flex items-center justify-center">
               <p class="text-3xl" style="
               background: linear-gradient(to right, #31DDDD, #83C543);
@@ -625,10 +670,10 @@
     </div>
   </div>
   <!-- section8 -->
-  <div class="mb-[1rem]">
-    <div class="h-[100%]">
+  <div class="mb-[1rem] py-10">
+    <div class="h-[100%]" id="launches">
       <div class="border border-white p-8 flex items-center justify-center">
-        <p class="text-3xl font-bold text-white">Type Launches</p>
+        <p class="text-3xl font-bold text-white">Types Of Launches</p>
       </div>
       <div class="flex flex-wrap gap-[2rem] items-center justify-center">
         <button
@@ -659,12 +704,12 @@
     </div>
   </div>
   <!-- section9 -->
-  <div class="bg-main-bg bg-cover bg-center h-[100vh] 2xl:h-[50vh]  flex flex-col justify-center items-center gap-[2rem]"
+  <div class="bg-main-bg bg-cover bg-center h-[100vh] 2xl:h-[50vh]  flex flex-col justify-center items-center gap-[2rem] w-full"
     style="background-image: url('src/images/trees.png');">
-    <div class="flex flex-col justify-center items-center">
-      <div class="flex flex-col gap-[1rem]">
+    <div class="flex flex-col justify-center items-center gap-8">
+      <div class="flex gap-[1rem]">
         <span class="block text-6xl font-normal text-center text-[#fff] ">Spark</span>
-        <span class="block text-6xl font-normal text-center text-[#ADFBFF]">Regenerative Finance</span>
+        <span class="block text-6xl font-normal text-center text-[#ADFBFF]">Regenerative Finance 🌱</span>
       </div>
       <div class="flex flex-col">
         <span class="block text-xl font-normal text-center text-[#fff]">Join Refi Starter's sustainable investment
@@ -729,23 +774,23 @@
     <div>
       <div class="flex flex-col gap-[2rem] md:flex-row justify-between">
         <div>
-          <img src="assets/images/LogoFooter.png" />
+          <img src="assets/images/logo-sprout.png" />
         </div>
-        <div>
+        <div class="flex flex-col gap-2">
           <p class="text-[#fff]">Exchange</p>
           <p class="text-[#fff]">Buy crypto</p>
           <p class="text-[#fff]">Market</p>
           <p class="text-[#fff]">Learn crypto</p>
           <p class="text-[#fff]">Contact</p>
         </div>
-        <div>
+        <div class="flex flex-col gap-2">
           <p class="text-[#fff]">CONTACT</p>
           <p class="text-[#fff]">Buy crypto</p>
           <p class="text-[#fff]">Market</p>
           <p class="text-[#fff]">Learn crypto</p>
           <p class="text-[#fff]">Contact</p>
         </div>
-        <div>
+        <div class="flex flex-col gap-8">
           <p class="text-[#fff]">NEWSLETTER</p>
           <p class="text-[#fff]">Subscribe our newsletter to get more<br /> free design course and resource.</p>
           <div class="relative right-[2.5rem] sm:right-[0rem]">
@@ -760,9 +805,12 @@
       </div>
       <div class="flex justify-between mt-[4rem]">
         <p class="text-[#fff]">Copyright © 2024 REFI</p>
-        <div class="flex">
+        <div class="flex gap-2">
           <i class="fab fa-facebook-f mr-2 text-[#fff]"></i>
-          <i class="fab fa-twitter mr-2 text-[#fff]"></i>
+            <a href="https://x.com/refistarter?s=21">
+              <i class="fab fa-twitter mr-2 text-[#fff]">
+              </i>
+            </a>
           <i class="fab fa-instagram mr-2 text-[#fff]"></i>
         </div>
       </div>
