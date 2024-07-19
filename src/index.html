@@ -15,14 +15,33 @@
   <link rel="canonical" href="https://refistarter.com/" />
   <link href="./scss/output.scss" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    #gradient-border {
+        position: relative;
+        padding-bottom: 10px;
+        border-radius: 50px; 
+    }
+
+    #gradient-border:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background: linear-gradient(to right, #31DDDD, #83C543);
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+    }
+</style>
 </head>
 
-<body class="body bg-black"style="background-image: url('assets/images/Clip.png');">
+<body class="body bg-black"style="background-image: url('assets/images/Clip.png'); background-repeat: repeat-y;">
   <!-- header -->
   <!-- main -->
-  <main class="bg-main-bg bg-cover bg-center h-[100vh] 2xl:h-[50vh] flex flex-col gap-[2rem]"
+  <main class="bg-main-bg bg-cover bg-center h-[100vh] 2xl:h-[50vh] flex flex-col gap-[2rem] z-10"
     style="background-image: url('assets/images/Home.png');">
-    <div class="absolute inset-0 z-0 h-[420px]" style="background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);"></div>
+    <div class="absolute inset-0 z-0 h-[70%]" style="background-image: url('assets/images/Shadow.png'); background-repeat: repeat-x;"></div>
     <header class="text-white py-8 px-8 w-full h-[80px] flex bg-transparent z-10">
       <div class="w-18">
         <img src="assets/images/header-logo.png" class="w-[134px]" alt="Refi Logo">
@@ -39,12 +58,11 @@
       <button class="bg-transparent border border-[#fff] text-[#fff] h-[2rem] py-6 px-4 rounded-lg flex items-center">
         Connect Wallet
       </button>
-
     </header>
-    <div class="flex flex-col justify-center items-center mt-[8rem] 2xl:mt-[15rem] gap-4">
+    <div class="flex flex-col justify-center items-center mt-[8rem] gap-4 z-10">
       <div class="">
-        <span class="block text-4xl font-normal text-center text-[#fff]">Empowering Web3 ReFi Projects</span>
-        <span class="block text-4xl font-normal text-center text-[#fff]">for a Sustainable Future</span>
+        <span class="block text-4xl font-normal text-center text-[#fff] z-auto">Empowering Web3 ReFi Projects</span>
+        <span class="block text-4xl font-normal text-center text-[#fff] z-auto">for a Sustainable Future</span>
       </div>
       <div class="flex space-x-4 h-[3rem]">
         <button class="bg-[#fff] text-[#2A5139] py-2 px-4 rounded-lg">Invest Now</button>
@@ -201,7 +219,7 @@
       <p class="text-3xl font-bold text-white">Projects</p>
     </div>
     <div class="flex flex-wrap gap-[1rem] justify-center" id="projects">
-      <div class="w-[21rem] h-[35rem] bg-[#202124]">
+      <div class="w-[21rem] h-[37rem] bg-[#202124] border-2 rounded">
         <div class="w-[100%] flex flex-col justify-center items-center">
           <img src="assets/images/ProjectImage.png" class="w-[95%] h-auto py-[0.5rem]" />
         </div>
@@ -251,7 +269,7 @@
           </button>
         </div>
       </div>
-      <div class="w-[21rem] h-[35rem] bg-[#202124]">
+      <div class="w-[21rem] h-[37rem] bg-[#202124] border-2 rounded">
         <div class="w-[100%] flex flex-col justify-center items-center">
           <img src="assets/images/ProjectImage2.png" class="w-[95%] h-auto py-[0.5rem]" />
         </div>
@@ -301,7 +319,7 @@
           </button>
         </div>
       </div>
-      <div class="w-[21rem] h-[35rem] bg-[#202124]">
+      <div class="w-[21rem] h-[37rem] bg-[#202124] border-2 rounded">
         <div class="w-[100%] flex flex-col justify-center items-center">
           <img src="assets/images/ProjectImage3.png" class="w-[95%] h-auto py-[0.5rem]" />
         </div>
@@ -683,7 +701,8 @@
           <p class="text-[#fff]">Token Sale through a Initial DEX Offering</p>
         </button>
         <button
-          class="w-[16rem] h-[20rem] bg-transparent border border-[#fff] text-[#fff] py-2 px-4 rounded-xl flex flex-col justify-center items-center">
+          id="gradient-border"
+          class="w-[16rem] h-[20rem] bg-transparent text-[#fff] py-2 px-4 rounded-xl flex flex-col justify-center items-center" style="border-bottom: 4px solid linear-gradient(to right, #31DDDD, #83C543);">
           <img src="assets/images/Launches.png" />
           <p class="text-xl text-[#31DDDD]">ILO</p>
           <p class="text-[#fff]">Initial Locked Liquidity Offerings. Are campaigns  for new Pairs and existing pais.</p>
